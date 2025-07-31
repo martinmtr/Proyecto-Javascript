@@ -30,9 +30,6 @@ const productos = [
     stock: 15,
   },
 
-
- 
-  
 ];
 
 //AGREGAR STOCK
@@ -58,11 +55,12 @@ const aumentarPrecio = () => {
 };
 aumentarPrecio();
 
-
-
 console.log(productos)
 
 
+
+
+                                             //PROMPT DE CONSULTA DE DESCUENTOS
 let productosEnPromo = prompt("Que producto buscas")
 if (productosEnPromo === "Remeras") {
   console.log("20% de descuento");
