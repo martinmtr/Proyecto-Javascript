@@ -61,12 +61,12 @@ console.log(productos)
 
 
                                              //PROMPT DE CONSULTA DE DESCUENTOS
-let productosEnPromo = prompt("Que producto buscas")
-if (productosEnPromo === "Remeras") {
+let productosEnPromo = prompt("¿Que producto buscas? remeras, pantalones, buzos.")
+if (productosEnPromo === "remeras") {
   console.log("20% de descuento");
-} else if (productosEnPromo === "Pantalon") {
+} else if (productosEnPromo === "pantalones") {
   console.log("2x1 en todos los modelos");
-} else if (productosEnPromo === "Buzos") {
+} else if (productosEnPromo === "buzos") {
   console.log("25% de descuento");
 }
   else {
