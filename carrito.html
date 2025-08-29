@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito KAiLUA</title>
+    <link rel="stylesheet" href="./carrito.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Carrito KAiLUA</h1>
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./carrito.html">Carrito</a></li>
+        <li>Sobre nosotros</li>
+      </ul>
+    </header>
+
+    <h2>Tus productos seleccionados</h2>
+    <section class="form">
+      <label for="zona">Zona de envio :</label>
+      <select name="zona" id="selectionZone">
+        <option value="norte">Norte</option>
+        <option value="sur">Sur</option>
+        <option value="oeste">Oeste</option>
+        <option value="este">Este</option>
+        <option value="caba">CABA</option>
+      </select>
+      <label for="cantidad">Cantidad de productos:</label>
+      <input type="text" id="cantidad" />
+      <button onclick="calcularEnvio()">Calcular envío</button>
+    </section>
+    <div class="productos-carrito"></div>
+    <button id="Vaciar" class="vaciarcarrito">Vaciar Carrito</button>
+    <script src="carrito.js"></script>
+  </body>
+</html>

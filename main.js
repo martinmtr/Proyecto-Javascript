@@ -1,66 +1,27 @@
-
-
-
 //PRODUCTOS EN LA WEB
 
-const productos = [
-  {
-    nombre: "Remeras estampadas",
-    precio: 45,
-    material: "100% algodón",
-    stockTalles: { XXL: "2"},
-  },
-  {
-    nombre: "Bermudas de surf",
-    precio: 120,
-    material: "neoprene",
-    stock: 12,
-  },
-  {
-    nombre: "Pantalon rusty ",
-    precio: 150,
-    material: "Jeans",
-    stock: 20,
-  },
-  {
-    nombre: "Buzos",
-    precio: 100,
-    talles: "XXL",
-    material: "100% algodón",
-    stock: 15,
-  },
-
-];
+const productos = [];
 
 //AGREGAR STOCK
 
-
 const sumarStock = () => {
   for (let i = 0; i < productos.length; i++) {
-    productos[i].stock += 10;                //AGREGA 10 UNIDADES A CADA PRODUCTOS EN STOCK
+    productos[i].stock += 10; //AGREGA 10 UNIDADES A CADA PRODUCTOS EN STOCK
   }
- };
- 
+};
+
 sumarStock();
-
-
 
 //AUMENTO DE PRECIO
 
 const aumentarPrecio = () => {
-  for (let i = 0; i < productos.length; i++){
-    productos[i].precio += 15;               //AUMENTA 15 TODOS LOS PRECIOS 
+  for (let i = 0; i < productos.length; i++) {
+    productos[i].precio += 15; //AUMENTA 15 TODOS LOS PRECIOS
   }
- 
 };
 aumentarPrecio();
 
-console.log(productos)
-
-
-
-
-                                             //PROMPT DE CONSULTA DE DESCUENTOS
+//PROMPT DE CONSULTA DE DESCUENTOS
 let productosEnPromo = prompt("¿Que producto buscas? remeras, pantalones, buzos.")
 if (productosEnPromo === "remeras") {
   console.log("20% de descuento");
@@ -72,32 +33,31 @@ if (productosEnPromo === "remeras") {
   else {
     alert(`El producto no tiene descuento`)
   }
- 
 
 
-  //Calculo de envio
+//Calculo de envio
 
 function calcularMontoEnvio(cantidad, zona) {
   const tarifas = {
     zonanorte: {
       base: 4000,
       envioGratis: {
-        minimo: 3, 
-        
+        minimo: 3,
+
       }
     },
     zonaoeste: {
       base: 5000,
       envioGratis: {
-        minimo: 3, 
-         
+        minimo: 3,
+
       }
     },
     zonasur: {
       base: 8000,
       envioGratis: {
-        minimo: 3, 
-        
+        minimo: 3,
+
       }
     }
   };
@@ -123,4 +83,146 @@ const zona = prompt("Ingrese la zona de envío (zonanorte, zonaoeste o zonasur):
 const cantidad = parseFloat(prompt("Ingrese la cantidad de prendas:"));
 
 const montoEnvio = calcularMontoEnvio(cantidad, zona);
-alert(`El monto de envío para ${cantidad} prendas a ${zona} es: ${montoEnvio}`)
+alert(`El monto de envío para ${cantidad} prendas a ${zona} es: ${montoEnvio}`);
+
+class listaStock {
+  //construccion
+  constructor(nombre, codigo, talle, material, precio, stock) {
+    this.nombre = nombre;
+    this.codigo = codigo;
+    this.talle = talle;
+    this.material = material;
+    this.precio = precio;
+    this.stock = stock;
+  }
+  // creacion de los metodos
+}
+
+//instanciar un class
+let pro1 = new listaStock(
+  "remera",
+  "5678",
+  "S",
+  "algodon 100%",
+  "$60000",
+  "10 unidades"
+);
+let pro2 = new listaStock(
+  "remera",
+  "5679",
+  "M",
+  "algodon 100%",
+  "$60000",
+  "15 unidades"
+);
+let pro3 = new listaStock(
+  "remera",
+  "5680",
+  "L",
+  "algodon 100%",
+  "$60000",
+  "16 unidades"
+);
+let pro4 = new listaStock(
+  "remera",
+  "5681",
+  "XL",
+  "algodon 100%",
+  "$60000",
+  "19 unidades"
+);
+let pro5 = new listaStock(
+  "remera",
+  "5682",
+  "XXL",
+  "algodon 100%",
+  "$60000",
+  "20 unidades"
+);
+let pro6 = new listaStock(
+  "bermuda",
+  "6523",
+  "S",
+  "neoprene",
+  "$100000",
+  "9 unidades"
+);
+let pro7 = new listaStock(
+  "bermuda",
+  "6524",
+  "M",
+  "neoprene",
+  "$100000",
+  "10 unidades"
+);
+let pro8 = new listaStock(
+  "bermuda",
+  "6525",
+  "L",
+  "neoprene",
+  "$100000",
+  "6 unidades"
+);
+let pro9 = new listaStock(
+  "bermuda",
+  "6526",
+  "XL",
+  "neoprene",
+  "$100000",
+  "30 unidades"
+);
+let pro10 = new listaStock(
+  "bermuda",
+  "6527",
+  "XXL",
+  "neoprene",
+  "$100000",
+  "14 unidades"
+);
+let pro11 = new listaStock(
+  "buzos",
+  "7848",
+  "S",
+  "algodon y friza",
+  "$80000",
+  "12unidades"
+);
+let pro12 = new listaStock(
+  "buzos",
+  "7849",
+  "M",
+  "algodon y friza",
+  "$80000",
+  "1 unidades"
+);
+let pro13 = new listaStock(
+  "buzos",
+  "7850",
+  "L",
+  "algodon y friza",
+  "$80000",
+  "10 unidades"
+);
+let pro14 = new listaStock(
+  "buzos",
+  "7851",
+  "XL",
+  "algodon y friza",
+  "$80000",
+  "10 unidades"
+);
+let pro15 = new listaStock(
+  "buzos",
+  "7852",
+  "XXL",
+  "algodon y friza",
+  "$80000",
+  "10 unidades"
+);
+
+productos.push(
+  pro1.pro2,pro3,pro4,pro5,pro6,pro7,pro8,pro8,pro9,pro10,pro11,pro12,pro13,pro14,pro15);
+console.log(productos);
+
+
+
