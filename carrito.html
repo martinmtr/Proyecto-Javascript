@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito KAiLUA</title>
     <link rel="stylesheet" href="./carrito.css" />
+    <link rel="stylesheet" type="text-alert" href="sweetalert2.min.css" />
   </head>
 
   <body>
-    <header>
-      <h1>Carrito KAiLUA</h1>
+    <header class="nav-container">
+      <h1>Tu carrito KAiLUA</h1>
       <ul>
         <li><a href="./index.html">Inicio</a></li>
         <li><a href="./carrito.html">Carrito</a></li>
-        <li>Sobre nosotros</li>
       </ul>
     </header>
 
-    <h2>Tus productos seleccionados</h2>
+    <h2>Calculá tu envio</h2>
     <section class="form">
       <label for="zona">Zona de envio :</label>
       <select name="zona" id="selectionZone">
@@ -31,8 +31,11 @@
       <input type="text" id="cantidad" />
       <button onclick="calcularEnvio()">Calcular envío</button>
     </section>
+    <h4>Tus productos seleccionados</h4>
     <div class="productos-carrito"></div>
     <button id="Vaciar" class="vaciarcarrito">Vaciar Carrito</button>
+    <button id="cash" class="pago">Continuar con el pago</button>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="carrito.js"></script>
   </body>
 </html>

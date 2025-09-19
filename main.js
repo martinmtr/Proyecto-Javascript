@@ -222,7 +222,7 @@ let pro15 = new listaStock(
 
 productos.push(
   pro1.pro2,pro3,pro4,pro5,pro6,pro7,pro8,pro8,pro9,pro10,pro11,pro12,pro13,pro14,pro15);
-console.log(productos);
+
 
 
 
