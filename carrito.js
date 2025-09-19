@@ -33,16 +33,16 @@ const removeFromCar = (id) => {
 
     localStorage.setItem("carrito", JSON.stringify(productsCar));
 
-    // llamar a la funcion
+   
     renderizarProductos();
 
-    console.log("Producto eliminado. Carrito actualizado:", productsCar);
+    
   } else {
-    console.warn(`Producto con ID ${id} no encontrado en el carrito.`);
+   
   }
 };
 
-// Renderiza el carrito al cargar la página
+
 renderizarProductos();
 
 //VACIAR CARRITO
